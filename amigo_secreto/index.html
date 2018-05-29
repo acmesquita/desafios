@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Desafio - Amigo Secreto</title>
+</head>
+<body>
+
+<h1>Amigo Secreto</h1>
+<ul class="lista_amigos">
+	
+</ul>
+
+<script type="text/javascript" src="participante.js"></script>
+<script type="text/javascript" src="secret_friend.js"></script>
+<script type="text/javascript">
+	
+	var p1 = new Participante("Lucas");
+	var p2 = new Participante("Catharina");
+	var p3 = new Participante("Livya");
+	var p4 = new Participante("Gleydson");
+	var p5 = new Participante("Cleiton");
+
+	var jogo = new AmigoSecreto([p1,p2,p3,p4,p5]);
+	var lista = jogo.sortear();
+	var lista_amigos = document.querySelector(".lista_amigos");
+	lista.forEach(l => {
+		let text = document.createTextNode(l.nome + ' tirou ' + l.amigo.nome);
+		let li = document.createElement('LI');
+		li.appendChild(text);
+		lista_amigos.appendChild(li);
+	})
+
+</script>
+
+</body>
+</html>
