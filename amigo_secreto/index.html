@@ -20,7 +20,7 @@
 	var p4 = new Participante("Gleydson");
 	var p5 = new Participante("Cleiton");
 
-	var jogo = new AmigoSecreto([p1,p2,p3,p4,p5]);
+	var jogo = new AmigoSecreto(Array.of(p1,p2,p3,p4,p5));
 	var lista = jogo.sortear();
 	var lista_amigos = document.querySelector(".lista_amigos");
 	lista.forEach(l => {

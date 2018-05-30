@@ -14,16 +14,14 @@ class AmigoSecreto{
 		return lista;
 	}
 
-	imprimirParticipantes(lista){
+	imprimirParticipantes(lista = []){
 		lista.forEach(p => console.log(p.nome + " tirou " + p.amigo.nome));
 	}
 
-	shuffle(lista) {	
+	shuffle(lista = []) {	
 		for (var i = lista.length - 1; i >= 0; i--) {
 			let j = Math.floor(Math.random()*(i+1));
-			let tmp = lista[i];
-			lista[i] = lista[j];
-			lista[j] = tmp;
+			[lista[i], lista[j]] = [lista[j], lista[i]]
 		}
 		return lista;
 	}
