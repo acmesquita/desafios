@@ -4,17 +4,24 @@ class Numero{
 		this.numero = numero;
 	}
 
-	isNumeroFeliz(numero){
-		if (numero == 0){
-			return false;
+	isNumeroFeliz(numero = this.numero){
+		let msg = "";
+		if (numero == 2){
+			msg = `${this.numero} é um número triste =(`;
 		}else if (numero == 1){
-			return true;
+			msg = `${this.numero} é um número feliz =D`;
 		}else{
-			let array = Array.from(numero.toString());
-			let arrayDobrado = array.map(e => Math.pow(e, 2))
-			let novoNumero = arrayDobrado.reduce((a,b) => {return a+b}, 0)
-			this.isNumeroFeliz(novoNumero);
+			let numeros = Array.from(numero.toString());
+			console.log(numeros);
+			let arrayDobrado = numeros.map(e => Math.pow(e, 2));
+			console.log(arrayDobrado);
+			let novoNumero = arrayDobrado.reduce((a,b) => {return a+b;}, 0);
+			console.log(novoNumero);
+			return this.isNumeroFeliz(novoNumero);
 		}
-
+	    return msg;
 	}
 }
+
+var n = new Numero(7)
+n.isNumeroFeliz();
