@@ -5,18 +5,29 @@
 </head>
 <body>
 
-<input type="number" name="numero" id="numero">
+<input type="number" name="numero" id="numero" value="7"/>
+<button id="linkValidador" >Validar Número</button>
 
+<p id="mensagem"></p>
 <script type="text/javascript" src="numero.js"></script>
 <script type="text/javascript">
+	window.onload = () => {
+
+		var validarNumero = ()=>{
+
+			let numeroEntrada = document.getElementById("numero").value;
+			let numeroFeliz = new Numero(numeroEntrada);
+			let retorno = numeroFeliz.isNumeroFeliz();
+			console.log(retorno)
+			var paragrafo = document.getElementById("mensagem")
+			let text = document.createTextNode(retorno);
+			paragrafo.appendChild(text);
+			let br = document.createElement("br");
+			paragrafo.appendChild(br);
+		}
 	
-	// var numeroEntrada = document.querySelector("#numero");
-
-	var numeroFeliz = new Numero(7)
-
-	var retorno = numeroFeliz.isNumeroFeliz();
-
-	console.log(retorno)
+		document.getElementById("linkValidador").addEventListener("click", validarNumero);
+	}
 </script>
 </body>
 </html>
