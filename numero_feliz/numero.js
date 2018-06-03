@@ -11,6 +11,7 @@ class Numero{
 			msg = `${this.numero} é um número triste =(`;
 		}else if (numero == 1){
 			msg = `${this.numero} é um número feliz =D`;
+			this.arrayNmeros = [];
 		}else{
 			this.arrayNmeros.push(numero);
 			let numeros = Array.from(numero.toString());
