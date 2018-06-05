@@ -8,12 +8,25 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <label for="reta_a">Reta A: <small>( x1, x2 )</small></label>
-    <input type="text" name="reta_a" id="reta_a" />
-    <br/>
-    <label for="reta_b">Reta B: <small>( y1, y2 )</small></label>
-    <input type="text" name="reta_b" id="reta_b" />
-    <br><br>
+    <p>
+        Em geometria, um problema comum é determinar se duas linhas definidas do ponto A ao B e do C ao D respectivamente, se cruzam.
+    </p>
+    <p>
+        Desenvolva uma classe Linha2D com as seguintes funcionalidades:
+    </p>
+    <p>
+        Uma linha é construída fornecendo-se dois pontos A=(x1,y1) e B=(x2,y2);
+        Uma linha L1 deve ser capaz de responder a questão "Eu me cruzo com a linha L2?".
+    </p>
+    
+    <label for="ponto1_a">Linha A: <small>Ponto 1 ( x1, y1 )</small></label>
+    <input type="text" name="ponto1_a" id="ponto1_a" /><small> Ponto 2 ( x2, y2 )</small>
+    <input type="text" name="ponto2_a" id="ponto2_a" />
+    <br/><br>
+    <label for="ponto1_b">Linha B: <small>Ponto 1 ( x3, y3 )</small></label>
+    <input type="text" name="ponto1_b" id="ponto1_b" /><small> Ponto 2 ( x4, y4 )</small>
+    <input type="text" name="ponto2_b" id="ponto2_b" />
+    <br/><br>
     <button name="validar" id="validar">Validar</button>
     <script src="linha.js"></script>
     
